@@ -1,8 +1,4 @@
-import 'typings-global'
-import * as smartq from 'smartq'
-import events = require('events')
+import * as smartpromise from '@pushrocks/smartpromise';
+import events = require('events');
 
-export {
-  events,
-  smartq
-}
+export { events, smartpromise };
