@@ -3,8 +3,10 @@ import { EventEmitter } from 'events';
 
 export { EventEmitter };
 
-export let once = async <T>(eventEmitter: EventEmitter, eventName: string): Promise<T> => {
-  let done = plugins.smartpromise.defer<T>();
-  eventEmitter.once(eventName, done.resolve);
+export const once = async <T>(eventEmitter: EventEmitter, eventName: string): Promise<T> => {
+  const done = plugins.smartpromise.defer<T>();
+  eventEmitter.once(eventName, eventPayload => {
+    done.resolve(eventPayload);
+  });
   return await done.promise;
 };
