@@ -9,7 +9,7 @@ tap.test('should create an emitter ->', async () => {
   expect(myEventEmitter).to.be.instanceof(smartevent.EventEmitter);
 });
 
-tap.test('smartevent.once -> should return a promise', async (tools) => {
+tap.test('smartevent.once -> should return a promise', async tools => {
   const oncePromise = smartevent.once(myEventEmitter, 'customEvent');
   expect(oncePromise).to.be.instanceof(Promise);
   expect(oncePromise).to.not.be.rejected;
