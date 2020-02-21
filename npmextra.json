@@ -3,5 +3,16 @@
     "npmGlobalTools": [],
     "npmAccessLevel": "public",
     "npmRegistryUrl": "registry.npmjs.org"
+  },
+  "gitzone": {
+    "projectType": "npm",
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "pushrocks",
+      "gitrepo": "smartevent",
+      "shortDescription": "handle events in smart ways",
+      "npmPackagename": "@pushrocks/smartevent",
+      "license": "MIT"
+    }
   }
 }
